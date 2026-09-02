@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutrizen — Harmony in Health</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= SCROLL PROGRESS BAR (global timer) ================= -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ================================ HEADER ================================ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#home" class="logo" aria-label="Nutrizen home">
+      <img src="images/logo.jpeg" alt="Nutrizen logo" class="logo-img">
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About Us</a>
+      <a href="#contact" class="nav-link">Contact Us</a>
+    </nav>
+    <a href="#categories" class="btn btn-pill btn-header">Shop The Collection</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+
+<!-- ================================ HERO ================================ -->
+
+<section class="hero" id="home">
+    <video class="hero-bg-video" autoplay muted loop playsinline>
+        <source src="images/factory.mp4" type="video/mp4">
+    </video>
+    <div class="container hero-inner">
+        <div class="hero-copy reveal" data-reveal="left">
+            <h1 class="hero-title">
+                A Healthier Everyday <br>Starts With Better Choices
+            </h1>
+            <p class="hero-desc">
+                We believe quality products shouldn't be complicated, unaffordable or filled with unnecessary ingredients. Nutrizen is building products that put people, health and everyday well-being first.
+            </p>
+            <a href="#categories" class="btn btn-pill btn-light">Discover Nutrizen</a>
+        </div>
+        <div class="hero-visual reveal" data-reveal="right">
+            <div class="hero-product-wrap">
+                <img src="images/product2.jpg" alt="Zing nutrition bar surrounded by almonds, cashews, chocolate and coconut" class="hero-product-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- ================================ RED FEATURE BAND ================================ -->
+<section class="feature-band">
+    <div class="feature-band-track">
+        <span class="feature-item"><i class="ico ico-leaf"></i> HEALTH</span>
+        <span class="feature-item"><i class="ico ico-shield"></i>HYGIENE</span>
+
+        <span class="feature-item"><i class="ico ico-leaf"></i>AFFORDABILITY</span>
+        <span class="feature-item"><i class="ico ico-shield"></i>ACCESSIBILITY</span>
+        <span class="feature-item"><i class="ico ico-cross"></i> No Additives</span>
+
+        <!-- Duplicate set for seamless looping -->
+        <span class="feature-item"><i class="ico ico-leaf"></i> No Artificial Ingredients</span>
+        <span class="feature-item"><i class="ico ico-shield"></i> No Preservatives</span>
+        <span class="feature-item"><i class="ico ico-cross"></i> No Artificial Flavors</span>
+
+        <span class="feature-item"><i class="ico ico-leaf"></i> No Artificial Colors</span>
+        <span class="feature-item"><i class="ico ico-shield"></i>No Chemicals</span>
+    </div>
+</section>
+
+  <!-- ================================ ABOUT ================================ -->
+  <section class="about-section" id="about">
+    <div class="container about-inner">
+
+      <div class="about-gallery reveal" data-reveal="left">
+        <div class="gallery-col gallery-col--offset">
+          <img src="images/product1.jpg" alt="Tropical coconut drink can" class="gallery-img gallery-img--tall">
+        </div>
+      </div>
+
+      <div class="about-copy reveal" data-reveal="right">
+        <p class="eyebrow">ABOUT US</p>
+        <h2 class="section-title">About Kids Joy's<br>Baby Sitter</h2>
+
+        <div class="pill-row">
+            <span class="pill pill-blue active" data-content="story">
+                our story
+            </span>
+            <span class="pill pill-blue" data-content="mission">
+                our mission
+            </span>
+            <span class="pill pill-blue" data-content="vision">
+                our vision
+            </span>
+        </div>
+
+        <p class="about-text" id="aboutText">
+            It Started With a Simple Question.
+            Nutrizen began with a belief that better products shouldn't be difficult to access. RIVR is our first step in building a portfolio of healthier, hygienic and affordable everyday products.
+        </p>
+        <blockquote class="quote">
+          <p>&ldquo;From our first brand, RIVR, to the products that will follow, we're building a company focused on making better everyday choices available to more people&rdquo;</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ TEAM / NICOLE ================================ -->
+  <section class="team-section">
+    <div class="container team-inner">
+      <div class="team-copy reveal" data-reveal="left">
+        <h3 class="team-title">Why should better products be out of reach for everyday people?</h3>
+        <p class="team-line">Our founder envisioned a company that could create products with a stronger focus on health, hygiene, quality and affordability while keeping the needs of everyday consumers at the centre.</p>
+        <p class="team-line">“We don't want to create products simply because there is a market for them. We want to create products because they can make everyday choices better.”</p>
+        <h4 class="team-title">— Sagar Varma</h4>
+      </div>
+      <div class="team-visual reveal" data-reveal="right">
+        <div class="portrait-arch">
+          <img src="images/image 46.png" alt="Portrait of Nicole, marketing lead at Nutrizen">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ HYDRATION ================================ -->
+  <section class="hydration-section">
+    <div class="hydration-visual reveal" data-reveal="left">
+      <img src="images/pro1.png" alt="Alkaline water bottle submerged underwater with light rays">
+    </div>
+
+    <div class="hydration-copy reveal" data-reveal="right">
+      <p class="eyebrow eyebrow-drop">PREMIUM ALKALINE WATER</p>
+      <h2 class="hydration-title">Alkaline Water.<br><em> Made Accessible.</em></h2>
+      <p class="hydration-sub">Pure. Balanced. Better for You.</p>
+      <p class="hydration-desc">Our alkaline water is naturally balanced with essential minerals and a high pH level to support your body's natural balance, keeping you feeling your best, every single day.</p>
+
+      <div class="feature-grid">
+        <div class="feature-box">
+          <div class="feature-value">8+</div>
+          <p class="feature-name">High pH</p>
+          <p class="feature-desc">Helps maintain body's natural balance.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-value">24+</div>
+          <p class="feature-name">Essential Minerals</p>
+          <p class="feature-desc">Packed with calcium, magnesium &amp; potassium.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-value">100%</div>
+          <p class="feature-name">Pure &amp; Clean</p>
+          <p class="feature-desc">Sourced from natural springs for purity.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-value">100%</div>
+          <p class="feature-name">Daily Boost</p>
+          <p class="feature-desc">Supports energy, hydration &amp; wellness.</p>
+        </div>
+      </div>
+
+      <a href="#categories" class="btn btn-solid">Explore Rivr &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ================================ ALKALINE RIVER BANNER ================================ -->
+  <section class="river-section">
+    <div class="section-timer"></div>
+    <div class="container">
+      <h2 class="river-title reveal" data-reveal="up">Alkaline Water <span class="river-brand">The<span class="river-box">Rivr</span>to Health</span></h2>
+      <div class="river-image reveal" data-reveal="up">
+          <video
+              src="images/coffee1.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto">
+          </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ CATEGORIES ================================ -->
+  <section class="categories-section" id="categories">
+    <div class="section-timer"></div>
+    <div class="container">
+      <h2 class="categories-title reveal" data-reveal="up"><span class="text-orange">our categories</span> <span class="text-navy">our tastes</span></h2>
+
+      <div class="categories-grid" id="categoriesGrid">
+        <div class="category-card">
+          <img src="images/pro2.jpg" alt="Sun Kiss Blossom flavor can">
+        </div>
+        <div class="category-card">
+          <img src="images/pro3.jpg" alt="Blueberry Fizz flavor can">
+        </div>
+        <div class="category-card">
+          <img src="images/pro6.jpg" alt="Sun Kiss Blossom flavor can">
+        </div>
+        <div class="category-card">
+          <img src="images/pro7.jpg" alt="Blueberry Fizz flavor can">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ TESTIMONIALS ================================ -->
+  <section class="testimonials-section">
+    <div class="section-timer"></div>
+    <div class="container">
+      <h2 class="testimonials-title reveal" data-reveal="up">Loved by businesses, and<br>individuals across the globe.</h2>
+
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">“I like the idea behind Nutrizen making better products accessible rather than positioning them as premium-only.”</p>
+          <div class="testimonial-person">
+            <img src="images/account.png" alt="Rohan Pawar">
+            <div>
+              <p class="testimonial-name">Rohan Pawar</p>
+              <p class="testimonial-loc">Banglore, India</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">“RIVR gives us an affordable way to include alkaline water in our everyday routine.”</p>
+          <div class="testimonial-person">
+            <img src="images/account.png" alt="Robert Fox">
+            <div>
+              <p class="testimonial-name">Pawan Sharma</p>
+              <p class="testimonial-loc">Manglore, India</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">“The focus on quality and affordability is what made me try the product.”</p>
+          <div class="testimonial-person">
+            <img src="images/account.png" alt="Sonali Bindre">
+            <div>
+              <p class="testimonial-name">Sonali Bindre</p>
+              <p class="testimonial-loc">Mysore, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================================ FOOTER ================================ -->
+<footer class="site-footer" id="contact">
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <img src="images/footer-logo.png" alt="Nutrizen logo" class="logo-img logo-img--footer">
+      <p class="footer-desc">Nutrizen is building a growing portfolio of health-focused products and brands designed around health, hygiene, quality and affordability.</p>
+
+      <div class="social-row">
+        <a href="#" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c2.7 0 3 0 4.1.06 1.1.05 1.8.22 2.4.46.6.24 1.1.56 1.6 1.06.5.5.82 1 1.06 1.6.24.6.4 1.3.46 2.4.06 1.1.06 1.4.06 4.1s0 3-.06 4.1c-.05 1.1-.22 1.8-.46 2.4a4.3 4.3 0 0 1-1.06 1.6 4.3 4.3 0 0 1-1.6 1.06c-.6.24-1.3.4-2.4.46-1.1.06-1.4.06-4.1.06s-3 0-4.1-.06c-1.1-.05-1.8-.22-2.4-.46a4.3 4.3 0 0 1-1.6-1.06 4.3 4.3 0 0 1-1.06-1.6c-.24-.6-.4-1.3-.46-2.4C2.2 15 2.2 14.7 2.2 12s0-3 .06-4.1c.05-1.1.22-1.8.46-2.4.24-.6.56-1.1 1.06-1.6a4.3 4.3 0 0 1 1.6-1.06c.6-.24 1.3-.4 2.4-.46C9 2.2 9.3 2.2 12 2.2zm0 1.8c-2.65 0-2.96 0-4 .06-.96.04-1.48.2-1.83.34-.46.18-.79.4-1.13.75-.35.34-.57.67-.75 1.13-.14.35-.3.87-.34 1.83-.05 1.04-.06 1.35-.06 4s0 2.96.06 4c.04.96.2 1.48.34 1.83.18.46.4.79.75 1.13.34.35.67.57 1.13.75.35.14.87.3 1.83.34 1.04.05 1.35.06 4 .06s2.96 0 4-.06c.96-.04 1.48-.2 1.83-.34.46-.18.79-.4 1.13-.75.35-.34.57-.67.75-1.13.14-.35.3-.87.34-1.83.05-1.04.06-1.35.06-4s0-2.96-.06-4c-.04-.96-.2-1.48-.34-1.83a2.9 2.9 0 0 0-.75-1.13 2.9 2.9 0 0 0-1.13-.75c-.35-.14-.87-.3-1.83-.34-1.04-.05-1.35-.06-4-.06zm0 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 1.8a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4zm5.7-2a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.25-1.5 1.55-1.5H17V3.7C16.6 3.65 15.4 3.5 14 3.5c-2.7 0-4.6 1.65-4.6 4.7v2.7H6.7V14H9.4v8h4.1z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="Twitter / X"><svg viewBox="0 0 24 24"><path d="M18.3 3H21l-6.1 7 7.2 9.5h-5.6l-4.4-5.8L6.9 19.5H4.2l6.5-7.5L3.8 3h5.7l4 5.3L18.3 3z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="Youtube"><svg viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4z"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#categories">Our Categories</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Get In Touch</h4>
+      <a href="mailto:hello@nutrizen.com">hello@nutrizen.com</a>
+      <a href="tel:+910000000000">+91 00000 00000</a>
+      <a href="#contact">Bengaluru, Karnataka, IN</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; <span id="year"></span> Nutrizen. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
