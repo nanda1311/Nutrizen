@@ -111,26 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-const track = document.querySelector('.feature-band-track');
-
-let position = -track.scrollWidth / 2;
-const speed = 0.5;
-
-function animateFeatureBand() {
-    position += speed;
-
-    if (position >= 0) {
-        position = -track.scrollWidth / 2;
-    }
-
-    track.style.transform = `translateX(${position}px)`;
-
-    requestAnimationFrame(animateFeatureBand);
-}
-
-animateFeatureBand();
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -180,5 +160,105 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     });
+
+});
+
+
+
+// TEAM SLIDER
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slides = document.querySelectorAll(".team-slide");
+    const dots = document.querySelectorAll(".team-dot");
+
+    const prevButton = document.querySelector(".team-arrow-left");
+    const nextButton = document.querySelector(".team-arrow-right");
+
+    let currentSlide = 0;
+    let autoSlide;
+
+    const slideDuration = 4000;
+
+
+    function showSlide(index) {
+
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = index;
+        }
+
+
+        /* Remove active class */
+        slides.forEach(function (slide) {
+            slide.classList.remove("active");
+        });
+
+        dots.forEach(function (dot) {
+            dot.classList.remove("active");
+        });
+
+
+        /* Add active class */
+        slides[currentSlide].classList.add("active");
+        dots[currentSlide].classList.add("active");
+    }
+
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+        restartAutoSlide();
+    }
+
+
+    function previousSlide() {
+        showSlide(currentSlide - 1);
+        restartAutoSlide();
+    }
+
+    function startAutoSlide() {
+
+        autoSlide = setInterval(function () {
+            showSlide(currentSlide + 1);
+        }, slideDuration);
+
+    }
+
+
+    function restartAutoSlide() {
+
+        clearInterval(autoSlide);
+        startAutoSlide();
+
+    }
+
+    nextButton.addEventListener("click", function () {
+        nextSlide();
+    });
+
+    prevButton.addEventListener("click", function () {
+        previousSlide();
+    });
+
+    dots.forEach(function (dot) {
+
+        dot.addEventListener("click", function () {
+
+            const slideIndex = parseInt(
+                this.getAttribute("data-slide")
+            );
+
+            showSlide(slideIndex);
+            restartAutoSlide();
+
+        });
+
+    });
+
+    showSlide(0);
+    startAutoSlide();
 
 });
