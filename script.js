@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentSlide = 0;
     let autoSlide;
 
-    const slideDuration = 4000;
+    const slideDuration = 6000;
 
 
     function showSlide(index) {
