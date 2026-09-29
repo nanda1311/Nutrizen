@@ -10,6 +10,49 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+<style>
+  .whatsapp-float {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    color: #fff;
+    background: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
+    font-size: 28px;
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+
+  .whatsapp-float:hover,
+  .whatsapp-float:focus-visible {
+    color: #fff;
+    background: #1ebe5d;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .28);
+    transform: translateY(-3px);
+  }
+
+  .whatsapp-float:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 600px) {
+    .whatsapp-float {
+      right: 16px;
+      bottom: 16px;
+      width: 52px;
+      height: 52px;
+      font-size: 25px;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -59,7 +102,6 @@
     </div>
 </section>
 
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <section class="feature-band">
@@ -130,106 +172,22 @@
     </div>
   </section>
   
-<!-- ================================ TEAM / FOUNDERS ================================ -->
-
-<section class="team-section">
-
-    <div class="container team-inner">
-
-        <!-- LEFT ARROW -->
-        <button class="team-arrow team-arrow-left" aria-label="Previous founder">
-            &#10094;
-        </button>
-
-        <!-- FOUNDER CONTENT -->
-        <div class="team-slider">
-
-            <!-- SLIDE 1 -->
-            <div class="team-slide active">
-
-                <div class="team-copy reveal" data-reveal="left">
-                    <h3 class="team-title">
-                        Why should better products be out of reach for everyday people?
-                    </h3>
-
-                    <p class="team-line">
-                        Our founder envisioned a company that could create products with a stronger focus on health, hygiene, quality and affordability while keeping the needs of everyday consumers at the centre.
-                    </p>
-
-                    <p class="team-line">
-                        “We don't want to create products simply because there is a market for them. We want to create products because they can make everyday choices better.”
-                    </p>
-
-                    <h4 class="team-title">
-                        Kiran Mutyala
-                    </h4>
-                    <h6 class="team-line">
-                        — Founder
-                    </h6>
-                </div>
-
-                <div class="team-visual reveal" data-reveal="right">
-                    <div class="portrait-arch">
-                        <img src="images/image 46.png"
-                             alt="Portrait of Kiran Mutyala">
-                    </div>
-                </div>
-
-            </div>
 
 
-            <!-- SLIDE 2 -->
-            <div class="team-slide">
-
-                <div class="team-copy reveal" data-reveal="left">
-                    <h3 class="team-title">
-                        Building products that make everyday living a little better.
-                    </h3>
-
-                    <p class="team-line">
-                        Bandaru Iswary Lakshmi believes that meaningful products begin by understanding the simple needs of everyday consumers and turning those needs into practical, reliable solutions.
-                    </p>
-
-                    <p class="team-line">
-                        “Great products don't have to be complicated. They simply need to be thoughtful, accessible and made with people in mind.”
-                    </p>
-
-                    <h4 class="team-title">
-                        Bandaru Iswary Lakshmi
-                    </h4>
-                    <h6 class="team-line">
-                        — Co-Founder
-                    </h6>
-                </div>
-
-                <div class="team-visual reveal" data-reveal="right">
-                    <div class="portrait-arch">
-                        <img src="images/image 45.png"
-                             alt="Portrait of Bandaru Iswary Lakshmi">
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- RIGHT ARROW -->
-        <button class="team-arrow team-arrow-right" aria-label="Next founder">
-            &#10095;
-        </button>
-
-    </div>
-    <!-- DOTS -->
-    <div class="team-dots">
-        <button class="team-dot active"
-                data-slide="0"
-                aria-label=""></button>
-        <button class="team-dot"
-                data-slide="1"
-                aria-label=""></button>
-    </div>
-</section>
+  <!-- ================================ ALKALINE RIVER BANNER ================================ -->
+  <section class="river-section">
+    <div class="section-timer"></div>
+      <div class="river-image reveal" data-reveal="up">
+          <video
+              src="images/coffee1.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto">
+          </video>
+      </div>
+  </section>
 
   <!-- ================================ HYDRATION ================================ -->
   <section class="hydration-section">
@@ -270,20 +228,7 @@
     </div>
   </section>
 
-  <!-- ================================ ALKALINE RIVER BANNER ================================ -->
-  <section class="river-section">
-    <div class="section-timer"></div>
-      <div class="river-image reveal" data-reveal="up">
-          <video
-              src="images/coffee1.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="auto">
-          </video>
-      </div>
-  </section>
+
 
   <!-- ================================ CATEGORIES ================================ -->
   <section class="categories-section" id="categories">
@@ -329,7 +274,7 @@
         <div class="contact-info-item">
           <div>
             <p class="contact-info-label">Phone</p>
-            <p class="contact-info-value">+91 98669 85668</p>
+            <p class="contact-info-value">+91 81422 22232</p>
           </div>
         </div>
       </div>
@@ -358,6 +303,92 @@
     </form>
   </div>
 </section>
+
+
+
+
+<!-- ================================ TEAM / FOUNDERS ================================ -->
+<section class="team-section">
+    <div class="container team-inner">
+        <!-- LEFT ARROW -->
+        <button class="team-arrow team-arrow-left" aria-label="Previous founder">
+            &#10094;
+        </button>
+        <!-- FOUNDER CONTENT -->
+        <div class="team-slider">
+            <!-- SLIDE 1 -->
+            <div class="team-slide active">
+                <div class="team-copy reveal" data-reveal="left">
+                    <h3 class="team-title">
+                        Why should better ever cost more?
+                    </h3>
+                    <p class="team-line">
+                    Our founder envisioned a future where health, hygiene, quality and affordability come together to create products that make everyday life better for everyone.
+                    </p>
+                    <p class="team-line">
+                        We don’t just follow the market. We create for better everyday choices.
+                    </p>
+                    <h4 class="team-title">
+                        Kiran Mutyala
+                    </h4>
+                    <h6 class="team-line">
+                        — Co-Founder
+                    </h6>
+                </div>
+                <div class="team-visual reveal" data-reveal="right">
+                    <div class="portrait-arch">
+                        <img src="images/image 46.png"
+                             alt="Portrait of Kiran Mutyala">
+                    </div>
+                </div>
+            </div>
+            <!-- SLIDE 2 -->
+            <div class="team-slide">
+                <div class="team-copy reveal" data-reveal="left">
+                    <h3 class="team-title">
+                        Building products that make everyday living a little better.
+                    </h3>
+                    <p class="team-line">
+                        Bandaru Iswary Lakshmi believes that meaningful products begin by understanding the simple needs of everyday consumers and turning those needs into practical, reliable solutions.
+                    </p>
+                    <p class="team-line">
+                        “Great products don't have to be complicated. They simply need to be thoughtful, accessible and made with people in mind.”
+                    </p>
+                    <h4 class="team-title">
+                        Bandaru Iswarya Lakshmi
+                    </h4>
+                    <h6 class="team-line">
+                        — Founder
+                    </h6>
+                </div>
+                <div class="team-visual reveal" data-reveal="right">
+                    <div class="portrait-arch">
+                        <img src="images/image 45.png"
+                             alt="Portrait of Bandaru Iswary Lakshmi">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- RIGHT ARROW -->
+        <button class="team-arrow team-arrow-right" aria-label="Next founder">
+            &#10095;
+        </button>
+
+    </div>
+    <!-- DOTS -->
+    <div class="team-dots">
+        <button class="team-dot active"
+                data-slide="0"
+                aria-label=""></button>
+        <button class="team-dot"
+                data-slide="1"
+                aria-label=""></button>
+    </div>
+</section>
+
+
 
   <!-- ================================ TESTIMONIALS ================================ -->
   <section class="testimonials-section">
@@ -432,7 +463,7 @@
     <div class="footer-col">
       <h4>Get In Touch</h4>
       <a href="mailto:hello@nutrizen.com">hello@nutrizen.com</a>
-      <a href="tel:+919866985668">+91 98669 85668</a>
+      <a href="tel:+919866985668">+91 81422 22232</a>
       <a href="#contact">Bengaluru, Karnataka, IN</a>
     </div>
   </div>
@@ -447,6 +478,10 @@
     </div>
   </div>
 </footer>
+
+<a class="whatsapp-float" href="https://wa.me/918142222232" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+</a>
 
 <script src="script.js"></script>
 </body>
