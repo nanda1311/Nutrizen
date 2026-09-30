@@ -52,6 +52,96 @@
       font-size: 25px;
     }
   }
+
+  /* Tablet and mobile layout overrides */
+  @media (max-width: 980px) {
+    .container { padding-left: 24px; padding-right: 24px; }
+    .about-inner, .contact-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .hydration-section { grid-template-columns: 1fr 1fr; }
+    .hydration-visual img {
+      width: calc(100% - 48px);
+      height: auto;
+      min-height: 0;
+      max-height: 520px;
+      margin: 48px 24px;
+    }
+    .hydration-copy { padding: 48px 24px 48px 0; }
+    .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .categories-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .testimonials-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .footer-inner { grid-template-columns: 1.3fr 1fr; }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 720px) {
+    .container { padding-left: 20px; padding-right: 20px; }
+    .header-inner { gap: 12px; padding-top: 12px; padding-bottom: 12px; }
+    .logo-img { height: 40px; }
+    .about-inner, .contact-inner, .hydration-section { grid-template-columns: 1fr; }
+    .about-section { padding: 40px 0; }
+    .about-gallery { max-width: 420px; margin: 0 auto; }
+    .gallery-col--offset { margin-top: 0; }
+    .gallery-img--tall { min-height: 0; height: auto; max-height: 420px; }
+    .about-copy { margin-top: 12px; }
+    .hydration-visual img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      margin: 0;
+      border-radius: 0;
+    }
+    .hydration-copy { padding: 40px 20px; }
+    .hydration-title { font-size: 34px; }
+    .feature-grid { gap: 12px; }
+    .categories-section { padding: 64px 0 48px; }
+    .categories-title { font-size: 27px; margin-bottom: 30px; }
+    .categories-grid { gap: 14px; }
+    .contact-section { padding: 60px 0; }
+    .contact-form { padding: 24px; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .team-slider { width: 82%; }
+    .team-slide.active { display: flex; flex-direction: column; text-align: center; gap: 24px; }
+    .team-copy { order: 2; padding-right: 0; }
+    .team-visual { order: 1; }
+    .team-title { font-size: 27px; }
+    .team-line { font-size: 13px; }
+    .portrait-arch { width: min(250px, 70vw); height: 300px; }
+    .team-arrow { width: 38px; height: 38px; font-size: 18px; }
+    .testimonials-section { padding: 60px 0; }
+    .testimonials-title { font-size: 25px; margin-bottom: 32px; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+    .footer-brand { grid-column: auto; }
+    .footer-bottom-inner { padding: 20px; }
+  }
+
+  @media (max-width: 480px) {
+    .container { padding-left: 16px; padding-right: 16px; }
+    .hero { padding: 44px 0 40px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+    .hero-copy { display: flex; flex-direction: column; align-items: center; }
+    .hero-title { font-size: clamp(29px, 8vw, 36px); }
+    .hero-desc { font-size: 13px; }
+    .hero-product-wrap { max-width: 290px; }
+    .feature-band-track { justify-content: flex-start; overflow-x: auto; }
+    .feature-item { padding: 15px 20px; font-size: 15px; }
+    .section-title { font-size: 30px; }
+    .hydration-copy { padding: 34px 16px; }
+    .hydration-title { font-size: 30px; }
+    .feature-box { padding: 15px 9px; }
+    .feature-desc { font-size: 10px; }
+    .categories-grid { grid-template-columns: 1fr; }
+    .contact-form { padding: 20px; }
+    .contact-info-row { gap: 18px; }
+    .contact-info-value { overflow-wrap: anywhere; }
+    .team-slider { width: 80%; }
+    .portrait-arch { height: 270px; }
+    .team-arrow-left { left: 0; }
+    .team-arrow-right { right: 0; }
+    .testimonial-card { padding: 24px 20px; }
+    .footer-bottom-inner { flex-direction: column; align-items: flex-start; }
+    .footer-bottom-links { gap: 16px; }
+  }
 </style>
 </head>
 <body>
@@ -268,7 +358,7 @@
         <div class="contact-info-item">
           <div>
             <p class="contact-info-label">Email</p>
-            <p class="contact-info-value">hello@nutrizen.com</p>
+            <p class="contact-info-value">nutrizenhealthyfoods@gmail.com</p>
           </div>
         </div>
         <div class="contact-info-item">
@@ -280,27 +370,64 @@
       </div>
     </div>
 
-    <form class="contact-form reveal" data-reveal="right" id="contact">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="cf-name">Full Name</label>
-          <input type="text" id="cf-name" name="name" placeholder="Your name" required>
-        </div>
-        <div class="form-group">
-          <label for="cf-email">Email Address</label>
-          <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="cf-subject">Subject</label>
-        <input type="text" id="cf-subject" name="subject" placeholder="What's this about?">
-      </div>
-      <div class="form-group">
-        <label for="cf-message">Message</label>
-        <textarea id="cf-message" name="message" rows="5" placeholder="Tell us how we can help..." required></textarea>
-      </div>
-      <button type="submit" class="btn btn-solid btn-form">Send Message &rarr;</button>
-    </form>
+
+<form
+  class="contact-form reveal"
+  data-reveal="right"
+  id="contact"
+  action="https://formspree.io/f/xnpnlejq"
+  method="POST"
+>
+  <div class="form-row">
+    <div class="form-group">
+      <label for="cf-name">Full Name</label>
+      <input
+        type="text"
+        id="cf-name"
+        name="name"
+        placeholder="Your name"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="cf-email">Email Address</label>
+      <input
+        type="email"
+        id="cf-email"
+        name="email"
+        placeholder="you@example.com"
+        required
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="cf-subject">Subject</label>
+    <input
+      type="text"
+      id="cf-subject"
+      name="subject"
+      placeholder="What's this about?"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="cf-message">Message</label>
+    <textarea
+      id="cf-message"
+      name="message"
+      rows="5"
+      placeholder="Tell us how we can help..."
+      required
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-solid btn-form">
+    Send Message &rarr;
+  </button>
+</form>
+
   </div>
 </section>
 
@@ -462,9 +589,9 @@
 
     <div class="footer-col">
       <h4>Get In Touch</h4>
-      <a href="mailto:hello@nutrizen.com">hello@nutrizen.com</a>
+      <a href="mailto:nutrizenhealthyfoods@gmail.com">nutrizenhealthyfoods@gmail.com</a>
       <a href="tel:+919866985668">+91 81422 22232</a>
-      <a href="#contact">Bengaluru, Karnataka, IN</a>
+      <a href="https://maps.app.goo.gl/ZFkrZuS2Ztff2Ln27">Plot No - 8, Door no - 7-136, Green Industrial Park Area, Gambheeram, Anandapuram Mandalam Visakhapatnam, Pin: 531163, Andhra Pradesh</a>
     </div>
   </div>
 
